@@ -1,19 +1,7 @@
 import {useState} from "react";
-import {makeStyles} from "@material-ui/core/styles";
-
-const useStyles = makeStyles({
-  form: {
-    width: "350px",
-    margin: "50px auto",
-    display: "flex",
-    flexDirection: "column",
-    justifyContent: "space-between"
-  }
-});
 
 const Form = ({addTodo}) => {
   const [text, setText] = useState("");
-  const styles = useStyles();
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -22,16 +10,16 @@ const Form = ({addTodo}) => {
   };
 
   return (
-    <form className = {styles.form} onSubmit = {handleSubmit}>
+    <form className = "form1" onSubmit = {handleSubmit}>
       <input
-        className = {styles.name}
+        className = "name"
         id = "title"
         placeholder = "タスク名"
         value = {text}
         onChange = {(e) => setText(e.target.value)}
       />
       <textarea
-        className = {styles.memo}
+        className = "memo"
         id = "memo"
         placeholder = "メモ"
       />

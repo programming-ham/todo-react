@@ -1,4 +1,5 @@
 import {useState} from "react";
+import "./style/main.css";
 import {nanoid} from "nanoid";
 import Title from "./Title";
 import Form from "./Form";

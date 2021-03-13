@@ -110,4 +110,34 @@ hr {
 input, select {
   vertical-align: middle;
 }
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 20px;
+}
+
+.form1 {
+  width: 500px;
+  margin: 0 auto;
+  margin-bottom: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.title {
+  text-align: center;
+  font-size: 4.0rem;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
 /*# sourceMappingURL=main.css.map */

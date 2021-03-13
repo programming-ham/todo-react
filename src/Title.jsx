@@ -1,7 +1,7 @@
 const Title = () => {
   return (
     <>
-      <h1>ToDoList</h1>
+      <h1 className = "title">ToDoList</h1>
     </>
   );
 };

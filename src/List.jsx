@@ -2,7 +2,7 @@ import Item from "./Item";
 
 const List = ({todos, deleteTodo}) => {
   return (
-    <ul>
+    <ul className = "list"> 
       {todos.map((todo) => {
         return (
           <Item
