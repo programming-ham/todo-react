@@ -2,7 +2,7 @@ import {useState} from "react";
 
 const Form = ({addTodo}) => {
   const [text, setText] = useState("");
-
+  
   const handleSubmit = (e) => {
     e.preventDefault();
     addTodo(text);
@@ -12,8 +12,8 @@ const Form = ({addTodo}) => {
   return (
     <form className = "form1" onSubmit = {handleSubmit}>
       <input
-        className = "name"
-        id = "title"
+        className = "task"
+        id = "task"
         placeholder = "タスク名"
         value = {text}
         onChange = {(e) => setText(e.target.value)}

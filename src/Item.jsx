@@ -8,8 +8,8 @@ const Item = ({content, id, deleteTodo}) => {
       <li>
         <span style = {{textDecoration: done ? "line-through": "none"}}>{content}</span>
         <button><FaPen /></button>
-        <button><FaCheckCircle /></button>
-        <button><FaTrashAlt /></button>
+        <button onClick = {() => setDone(!done)}><FaCheckCircle /></button>
+        <button onClick = {() => deleteTodo(id)}><FaTrashAlt /></button>
         
       
       </li>

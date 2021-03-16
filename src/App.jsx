@@ -8,7 +8,7 @@ import List from "./List";
 const App = () => {
   const [todos, setTodos] = useState([]);
 
-  const [filter, setFilter] = useState("ALL");
+  // const [filter, setFilter] = useState("ALL");
 
   const addTodo = (text) => {
     setTodos([...todos, {content: text, id: nanoid()}])
