@@ -1,4 +1,5 @@
 import {useState} from "react";
+import {FaCheckCircle, FaTrashAlt, FaPen} from "react-icons/fa";
 
 const Item = ({content, id, deleteTodo}) => {
   const [done, setDone] = useState(false);
@@ -6,9 +7,9 @@ const Item = ({content, id, deleteTodo}) => {
     <ul>
       <li>
         <span style = {{textDecoration: done ? "line-through": "none"}}>{content}</span>
-        <button>編集</button>
-        <button onClick = {() => setDone(!done)}>達成</button>
-        <button onClick = {() => deleteTodo(id)}>削除</button>
+        <button><FaPen /></button>
+        <button><FaCheckCircle /></button>
+        <button><FaTrashAlt /></button>
         
       
       </li>
