@@ -10,8 +10,8 @@ const App = () => {
 
   // const [filter, setFilter] = useState("ALL");
 
-  const addTodo = (text) => {
-    setTodos([...todos, {content: text, id: nanoid()}])
+  const addTodo = (text1, text2) => {
+    setTodos([...todos, {content1: text1, content2: text2, id: nanoid()}])
   };
 
   const deleteTodo = (id) => {
