@@ -19,6 +19,12 @@ const Form = ({addTodo}) => {
         placeholder = "Name"
         value = {text1}
         autoFocus = {true}
+        onKeyPress = {(e) => {
+          if(e.key === "Enter") {
+            e.preventDefault()
+            document.getElementById("note").focus()
+          }
+        }}
         onChange = {(e) => setText1(e.target.value)}
       />
       <textarea
@@ -26,10 +32,22 @@ const Form = ({addTodo}) => {
         id = "note"
         placeholder = "Note"
         value = {text2}
+        onKeyPress = {(e) => {
+          if(e.key === "Enter") {
+            e.preventDefault()
+            document.getElementById("addBtn").focus()
+          }
+        }}
         onChange = {(e) => setText2(e.target.value)}
-
       />
-      <button className = "addBtn" disabled = {text1.trim() === ""}>Add new task</button>
+      <button
+        className = "addBtn"
+        id = "addBtn"
+        disabled = {text1.trim() === ""}
+        onClick = {() => {
+          document.getElementById("task").focus()
+        }}
+      >Add new task</button>
 
     </form>
   );
