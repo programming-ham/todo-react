@@ -115,7 +115,7 @@ html {
 }
 
 body {
-  font-size: 20px;
+  font-size: 15px;
 }
 
 .form1 {
@@ -127,21 +127,69 @@ body {
   justify-content: space-between;
 }
 
-.itemInner {
-  width: 500px;
-  padding: 3px;
-  margin-bottom: 5px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+input, textarea {
+  display: inline-block;
+  border: none;
+  margin: 5px 0;
+  padding: 5px 10px;
+  border-radius: 3px;
+  background: #e0e0e0;
+  color: #2d2d2d;
 }
 
-.itemInner:nth-child(2n) {
+.addBtn {
+  background: #1abc9c;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  height: 30px;
+}
+
+.addBtn:disabled {
+  background: #a9a9a9;
+}
+
+.itemAll {
+  display: flex;
+  flex-direction: column;
+  width: 600px;
+  margin-bottom: 10px;
+  padding: 0 10px;
+  border: 2px solid #7761ED;
+  border-radius: 10px;
+}
+
+.itemAll:nth-child(2n) {
   background-color: #f5f5f5;
 }
 
+.itemInner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid;
+  padding: 5px 5px 5px 0;
+}
+
+.task {
+  padding-left: 8px;
+  font-weight: bold;
+}
+
+.memo {
+  padding: 5px 0 5px 8px;
+}
+
+.btns {
+  display: flex;
+  align-items: center;
+}
+
 .btn {
-  width: 30px;
+  display: inline-block;
+  width: 35px;
+  height: 25px;
+  margin-right: 3px;
 }
 
 .edit {
@@ -154,10 +202,11 @@ body {
 
 .delete {
   color: red;
+  margin: 0;
 }
 
 .list {
-  width: 500px;
+  width: 600px;
   margin: 0 auto;
   display: flex;
   flex-direction: column;

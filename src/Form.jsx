@@ -12,23 +12,24 @@ const Form = ({addTodo}) => {
   };
 
   return (
-    <form className = "form1" onSubmit = {handleSubmit}>
+    <form className = "form1" autoComplete = "off" onSubmit = {handleSubmit}>
       <input
-        className = "task"
+        className = "formTask"
         id = "task"
-        placeholder = "タスク名"
+        placeholder = "Name"
         value = {text1}
+        autoFocus = {true}
         onChange = {(e) => setText1(e.target.value)}
       />
       <textarea
-        className = "memo"
-        id = "memo"
-        placeholder = "メモ"
+        className = "formNote"
+        id = "note"
+        placeholder = "Note"
         value = {text2}
         onChange = {(e) => setText2(e.target.value)}
 
       />
-      <button disabled = {text1.trim() === ""}>追加</button>
+      <button className = "addBtn" disabled = {text1.trim() === ""}>Add new task</button>
 
     </form>
   );

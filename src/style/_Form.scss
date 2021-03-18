@@ -1,3 +1,5 @@
+$green: #1abc9c;
+
 .form1 {
   width: 500px;
   margin: 0 auto;
@@ -5,4 +7,27 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+}
+
+input, textarea {
+  display: inline-block;
+  border: none;
+  margin: 5px 0;
+  padding: 5px 10px;
+  border-radius: 3px;
+  background: darken(#f9f9f9, 10%);
+  color: darken(#f9f9f9, 80%);
+}
+
+
+
+.addBtn {
+  background: $green;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  height: 30px;
+  &:disabled {
+    background: #a9a9a9;
+  }
 }
