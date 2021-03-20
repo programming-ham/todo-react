@@ -1,6 +1,6 @@
 $green: #1abc9c;
 
-.form1 {
+form {
   width: 500px;
   margin: 0 auto;
   margin-bottom: 30px;
@@ -18,8 +18,6 @@ input, textarea {
   background: darken(#f9f9f9, 10%);
   color: darken(#f9f9f9, 80%);
 }
-
-
 
 .addBtn {
   background: $green;

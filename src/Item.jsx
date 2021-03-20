@@ -1,22 +1,34 @@
-import {useState} from "react";
+import classnames from "classnames";
 import {FaCheckCircle, FaTrashAlt, FaPen} from "react-icons/fa";
 
-const Item = ({content1, content2, id, deleteTodo}) => {
-  const [done, setDone] = useState(false);
+const Item = ({item, deleteItem, handleCheck}) => {
+  const handleChange = () => {
+    handleCheck(item);
+  };
+  
   return (
-    <ul className = "itemAll">
+    <ul className = "itemContents">
       <div className = "itemInner">
         <li>
-          <span className = "task" style = {{textDecoration: done ? "line-through": "none"}}>{content1}</span>
+          <span className = {classnames({task: true, through: item.done})}>{item.content1}</span>
         </li>
         <div className = "btns">
-          <button className = " btn edit"><FaPen /></button>
-          <button className = "btn done" onClick = {() => setDone(!done)}><FaCheckCircle /></button>
-          <button className = "btn delete" onClick = {() => deleteTodo(id)}><FaTrashAlt /></button>
+          <button className = {classnames("btn", "edit")}><FaPen /></button>
+          <button 
+            className = {classnames("btn", "done")}
+            onClick = {() => !item.done}
+            onChange = {handleChange}
+          ><FaCheckCircle /></button>
+          <button
+           className = {classnames("btn", "delete")}
+           onClick = {() => deleteItem(item.id)}
+          ><FaTrashAlt /></button>
         </div>
       </div>
-      <p className = "memo">{content2}</p>
+      <p className = "note">{item.content2}</p>
     </ul>
   );
 };
 export default Item;
+
+// className = {classnames({btn: true, done: true, through: item.done})}

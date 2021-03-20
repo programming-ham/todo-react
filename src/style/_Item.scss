@@ -1,4 +1,4 @@
-.itemAll {
+.itemContents {
   display: flex;
   flex-direction: column;
   width: 600px;
@@ -24,7 +24,11 @@
   font-weight: bold;
 }
 
-.memo {
+.through {
+  text-decoration: line-through;
+}
+
+.note {
   padding: 5px 0 5px 8px;
 }
 

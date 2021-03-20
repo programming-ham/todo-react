@@ -1,20 +1,18 @@
 import {useState} from "react";
 
-const Form = ({addTodo}) => {
+const Form = ({addItem}) => {
   const [text1, setText1] = useState("");
   const [text2, setText2] = useState("");
-  
   const handleSubmit = (e) => {
     e.preventDefault();
-    addTodo(text1, text2);
+    addItem(text1, text2);
     setText1("");
     setText2("");
   };
 
   return (
-    <form className = "form1" autoComplete = "off" onSubmit = {handleSubmit}>
+    <form autoComplete = "off" onSubmit = {handleSubmit}>
       <input
-        className = "formTask"
         id = "task"
         placeholder = "Name"
         value = {text1}
@@ -28,7 +26,6 @@ const Form = ({addTodo}) => {
         onChange = {(e) => setText1(e.target.value)}
       />
       <textarea
-        className = "formNote"
         id = "note"
         placeholder = "Note"
         value = {text2}
@@ -48,7 +45,6 @@ const Form = ({addTodo}) => {
           document.getElementById("task").focus()
         }}
       >Add new task</button>
-
     </form>
   );
 };

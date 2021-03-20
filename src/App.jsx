@@ -1,32 +1,40 @@
 import {useState} from "react";
 import "./style/main.css";
 import {nanoid} from "nanoid";
-import Title from "./Title";
 import Form from "./Form";
 import List from "./List";
 
 const App = () => {
-  const [todos, setTodos] = useState([]);
-
-  // const [filter, setFilter] = useState("ALL");
-
-  const addTodo = (text1, text2) => {
-    setTodos([...todos, {content1: text1, content2: text2, id: nanoid()}])
+  const [filter, setFilter] = useState("ALL");
+  const handleFilterChange = value => setFilter(value);
+  const [items, setItems] = useState([]);
+  const addItem = (text1, text2) => {
+    setItems([...items, {content1: text1, content2: text2, done: false, id: nanoid()}])
   };
-
-  const deleteTodo = (id) => {
-    setTodos(todos.filter((todo) => todo.id !== id));
+  const deleteItem = (id) => {
+    setItems(items.filter((item) => item.id !== id));
+  };
+  const handleCheck = checked => {
+    const newItems = items.map(item => {
+      if(item.id === checked.id) {
+        item.done = !item.done;
+      }
+      return item;
+    });
+    setItems(newItems);
   }
 
   return (
     <>
-      <Title />
-      <Form addTodo = {addTodo}/>
+      <Form addItem = {addItem}/>
       <List
-        todos = {todos}
-        deleteTodo = {deleteTodo}
+        key = {items.id}
+        handleFilterChange = {handleFilterChange}
+        filter = {filter}
+        items = {items}
+        deleteItem = {deleteItem}
+        handleCheck = {handleCheck}
       />
-
     </>
   );
 };

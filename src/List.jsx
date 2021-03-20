@@ -1,20 +1,32 @@
+import Filter from "./Filter";
 import Item from "./Item";
 
-const List = ({todos, deleteTodo}) => {
+const List = ({handleFilterChange, filter, items, deleteItem, handleCheck}) => {
+  const displayItems = items.filter(item => {
+    if(filter === "ALL") return true;
+    if(filter === "ACTIVE") return !item.done;
+    if(filter === "DONE") return item.done;
+  });
+
   return (
-    <ul className = "list"> 
-      {todos.map((todo) => {
-        return (
-          <Item
-            key = {todo.id}
-            id = {todo.id}
-            content1 = {todo.content1}
-            content2 = {todo.content2}
-            deleteTodo = {deleteTodo}
-          /> 
-        );
-      })}
-    </ul>
+    <>
+      <Filter
+        handleFilterChange = {handleFilterChange}
+        value = {filter}
+      />
+      <ul className = "list"> 
+        {displayItems.map(item => {
+          return (
+            <Item
+              key = {item.id}
+              item = {item} 
+              deleteItem = {deleteItem}
+              handleCheck = {handleCheck}
+            />
+         );
+       })}
+      </ul>
+    </>
   );
 };
 
