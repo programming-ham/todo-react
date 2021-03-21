@@ -119,9 +119,10 @@ body {
 }
 
 form {
-  width: 500px;
+  width: 50rem;
   margin: 0 auto;
-  margin-bottom: 30px;
+  margin-top: 10px;
+  margin-bottom: 20px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -131,7 +132,7 @@ input, textarea {
   display: inline-block;
   border: none;
   margin: 5px 0;
-  padding: 5px 10px;
+  padding: 5px 1rem;
   border-radius: 3px;
   background: #e0e0e0;
   color: #2d2d2d;
@@ -153,10 +154,26 @@ input, textarea {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-bottom: 20px;
+}
+
+.filter {
+  width: 6.5rem;
+  height: 25px;
+  margin: 0 0.3rem;
+  outline: none;
+  border: none;
+  border-radius: 10px;
+  background-color: #dcdcdc;
+}
+
+.isActive {
+  color: white;
+  background-color: #dda0dd;
 }
 
 .list {
-  width: 600px;
+  width: 60rem;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
@@ -167,15 +184,11 @@ input, textarea {
 .itemContents {
   display: flex;
   flex-direction: column;
-  width: 600px;
+  width: 60rem;
   margin-bottom: 10px;
-  padding: 0 10px;
+  padding: 0 1rem;
   border: 2px solid #7761ED;
   border-radius: 10px;
-}
-
-.itemContents:nth-child(2n) {
-  background-color: #f5f5f5;
 }
 
 .itemInner {
@@ -183,11 +196,11 @@ input, textarea {
   justify-content: space-between;
   align-items: center;
   border-bottom: 1px solid;
-  padding: 5px 5px 5px 0;
+  padding: 5px 0.5rem 5px 0;
 }
 
 .task {
-  padding-left: 8px;
+  padding-left: 0.8rem;
   font-weight: bold;
 }
 
@@ -196,7 +209,7 @@ input, textarea {
 }
 
 .note {
-  padding: 5px 0 5px 8px;
+  padding: 5px 0 5px 0.8rem;
 }
 
 .btns {
@@ -206,20 +219,20 @@ input, textarea {
 
 .btn {
   display: inline-block;
-  width: 35px;
+  width: 3.5rem;
   height: 25px;
-  margin-right: 3px;
+  margin-right: 0.3rem;
 }
 
-.edit {
+.editBtn {
   color: blue;
 }
 
-.done {
+.doneBtn {
   color: green;
 }
 
-.delete {
+.deleteBtn {
   color: red;
   margin: 0;
 }

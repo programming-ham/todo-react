@@ -1,23 +1,22 @@
-import {useState} from "react";
 import "./style/main.css";
+import {useState} from "react";
 import {nanoid} from "nanoid";
 import Form from "./Form";
 import List from "./List";
 
 const App = () => {
-  const [filter, setFilter] = useState("ALL");
-  const handleFilterChange = value => setFilter(value);
   const [items, setItems] = useState([]);
   const addItem = (text1, text2) => {
-    setItems([...items, {content1: text1, content2: text2, done: false, id: nanoid()}])
+    setItems([...items, {key: nanoid(), content1: text1, content2: text2, done: false}])
   };
-  const deleteItem = (id) => {
-    setItems(items.filter((item) => item.id !== id));
+  const deleteItem = (key) => {
+    setItems(items.filter((item) => item.key !== key));
   };
-  const handleCheck = checked => {
+
+  const handleCheck = c => {
     const newItems = items.map(item => {
-      if(item.id === checked.id) {
-        item.done = !item.done;
+      if(item.key === c.key) {
+        item.done = !item.done
       }
       return item;
     });
@@ -26,14 +25,13 @@ const App = () => {
 
   return (
     <>
-      <Form addItem = {addItem}/>
+      <Form 
+        addItem = {addItem}
+        />
       <List
-        key = {items.id}
-        handleFilterChange = {handleFilterChange}
-        filter = {filter}
         items = {items}
+        handleCheck ={handleCheck}
         deleteItem = {deleteItem}
-        handleCheck = {handleCheck}
       />
     </>
   );

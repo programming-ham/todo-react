@@ -1,9 +1,8 @@
-$green: #1abc9c;
-
 form {
-  width: 500px;
+  width: 50rem;
   margin: 0 auto;
-  margin-bottom: 30px;
+  margin-top: 10px;
+  margin-bottom: 20px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -13,14 +12,14 @@ input, textarea {
   display: inline-block;
   border: none;
   margin: 5px 0;
-  padding: 5px 10px;
+  padding: 5px 1rem;
   border-radius: 3px;
   background: darken(#f9f9f9, 10%);
   color: darken(#f9f9f9, 80%);
 }
 
 .addBtn {
-  background: $green;
+  background: #1abc9c;
   color: #fff;
   border: none;
   border-radius: 3px;

@@ -2,4 +2,20 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-bottom: 20px;
+}
+
+.filter {
+  width: 6.5rem;
+  height: 25px;
+  margin: 0 0.3rem;
+  outline: none;
+  border: none;
+  border-radius: 10px;
+  background-color: #dcdcdc;
+}
+
+.isActive {
+  color: white;
+  background-color: #dda0dd;
 }

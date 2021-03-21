@@ -3,6 +3,7 @@ import {useState} from "react";
 const Form = ({addItem}) => {
   const [text1, setText1] = useState("");
   const [text2, setText2] = useState("");
+
   const handleSubmit = (e) => {
     e.preventDefault();
     addItem(text1, text2);
@@ -17,25 +18,25 @@ const Form = ({addItem}) => {
         placeholder = "Name"
         value = {text1}
         autoFocus = {true}
+        onChange = {(e) => setText1(e.target.value)}
         onKeyPress = {(e) => {
           if(e.key === "Enter") {
             e.preventDefault()
             document.getElementById("note").focus()
           }
         }}
-        onChange = {(e) => setText1(e.target.value)}
       />
       <textarea
         id = "note"
         placeholder = "Note"
         value = {text2}
+        onChange = {(e) => setText2(e.target.value)}
         onKeyPress = {(e) => {
           if(e.key === "Enter") {
             e.preventDefault()
             document.getElementById("addBtn").focus()
           }
         }}
-        onChange = {(e) => setText2(e.target.value)}
       />
       <button
         className = "addBtn"
