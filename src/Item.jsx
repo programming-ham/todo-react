@@ -7,7 +7,7 @@ const Item = ({item, handleCheck, deleteItem}) => {
   };
   
   return (
-    <div className = "itemContents">
+    <div className = {classnames({"itemContents": true, "orange": item.done})}>
       <div className = "itemInner">
           <span className = {classnames({task: true, through: item.done})}>{item.content1}</span>
           <div className = "btns">
