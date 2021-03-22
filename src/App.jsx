@@ -13,9 +13,9 @@ const App = () => {
     setItems(items.filter((item) => item.key !== key));
   };
 
-  const handleCheck = c => {
+  const handleCheck = selected => {
     const newItems = items.map(item => {
-      if(item.key === c.key) {
+      if(item.key === selected.key) {
         item.done = !item.done
       }
       return item;

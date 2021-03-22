@@ -4,13 +4,17 @@ import Item from "./Item";
 
 const List = ({items, handleCheck, deleteItem}) => {
   const [filter, setFilter] = useState("ALL");
-  // eslint-disable-next-line
   const displayItems = items.filter(item => {
-    if(filter === "ALL") return true;
-    if(filter === "ACTIVE") return !item.done;
-    if(filter === "DONE") return item.done;
-  });
+    if(filter === "ALL") {
+      return true;
+    } else if (filter === "ACTIVE") {
+      return !item.done;
+    } else {
+      return item.done;
+    }
+  }); 
   const handleFilterChange = value => setFilter(value);
+  // 上記全てfilter関連
 
   return (
     <>
@@ -22,6 +26,7 @@ const List = ({items, handleCheck, deleteItem}) => {
       {displayItems.map(item => {
         return(
           <Item
+            key = {item.key}
             item = {item} 
             handleCheck = {handleCheck}
             deleteItem = {deleteItem}

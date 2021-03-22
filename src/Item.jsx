@@ -7,9 +7,12 @@ const Item = ({item, handleCheck, deleteItem}) => {
   };
   
   return (
-    <div className = {classnames({"itemContents": true, "orange": item.done})}>
+    <ul className = {classnames({"itemContents": true, "orange": item.done})}>
       <div className = "itemInner">
-          <span className = {classnames({task: true, through: item.done})}>{item.content1}</span>
+          <li 
+            className = {classnames({task: true, through: item.done})}
+            key = {item.key}
+          >{item.content1}</li>
           <div className = "btns">
             <button 
               className = {classnames("btn", "editBtn")}
@@ -26,7 +29,7 @@ const Item = ({item, handleCheck, deleteItem}) => {
         </div>
       </div>
       <p className = "note">{item.content2}</p>
-    </div>
+    </ul>
   );
 };
 export default Item;

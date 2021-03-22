@@ -4,7 +4,6 @@ const Filter = ({handleFilterChange, value}) => {
   const handleClick = (key) => {
     handleFilterChange(key);
   };
-// ここのpreventDefaultはaタグのページ遷移を妨害しているのでは？→ボタンなら必要なし
 
   return (
     <div className = "filters">
