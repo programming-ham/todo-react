@@ -1,11 +1,19 @@
 .itemContents {
   display: flex;
   flex-direction: column;
-  width: 60rem;
-  margin-bottom: 10px; 
+  width: 60rem; 
+  margin-bottom: 1rem; 
   padding: 0 1rem;
-  border: 2px solid #7761ED;
-  border-radius: 10px;
+  border: 0.2rem solid #7761ED;
+  border-radius: 1rem;
+  @include tab {
+    width: 90vw;
+    max-width: 60rem;
+  }
+  @include sp {
+    width: 90vw;
+    margin-bottom: 0.5rem;
+  }
 }
 
 .orange {
@@ -16,8 +24,8 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-bottom: 1px solid;
-  padding: 5px 0.5rem 5px 0;
+  border-bottom: 0.1rem solid;
+  padding: 0.5rem 0.5rem 0.5rem 0;
 }
 
 .task {
@@ -30,7 +38,7 @@
 }
 
 .note {
-  padding: 5px 0 5px 0.8rem;
+  padding: 0.5rem 0 0.5rem 0.8rem;
 }
 
 .btns {
@@ -41,7 +49,7 @@
 .btn {
   display: inline-block;
   width: 3.5rem;
-  height: 25px;
+  height: 2.5rem;
   margin-right: 0.3rem;
 }
 
