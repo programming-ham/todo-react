@@ -3,6 +3,7 @@ import Filter from "./Filter";
 import Item from "./Item";
 
 const List = ({items, handleCheck, deleteItem}) => {
+  // 
   const [filter, setFilter] = useState("ALL");
   const displayItems = items.filter(item => {
     if(filter === "ALL") {

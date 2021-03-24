@@ -17,10 +17,9 @@ const Item = ({item, handleCheck, deleteItem}) => {
             <button 
               className = {classnames("btn", "editBtn")}
             ><FaPen /></button>
-            <button 
+            <button type = "button" 
               className = {classnames("btn", "doneBtn")}
-              onClick = {() => item.done}
-              onChange = {handleChange}
+              onClick = {handleChange}
             ><FaCheckCircle /></button>
             <button
               className = {classnames("btn", "deleteBtn")}

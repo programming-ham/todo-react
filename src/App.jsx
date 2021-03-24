@@ -30,8 +30,8 @@ const App = () => {
         />
       <List
         items = {items}
-        handleCheck ={handleCheck}
         deleteItem = {deleteItem}
+        handleCheck = {handleCheck}
       />
     </>
   );
