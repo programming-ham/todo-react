@@ -244,6 +244,7 @@ input, textarea {
 
 .through {
   text-decoration: line-through;
+  color: #696969;
 }
 
 .note {

@@ -10,7 +10,7 @@ const Item = ({item, handleCheck, deleteItem}) => {
     <ul className = {classnames({"itemContents": true, "orange": item.done})}>
       <div className = "itemInner">
           <li 
-            className = {classnames({task: true, through: item.done})}
+            className = {classnames({"task": true, "through": item.done})}
             key = {item.key}
           >{item.content1}</li>
           <div className = "btns">
@@ -27,7 +27,7 @@ const Item = ({item, handleCheck, deleteItem}) => {
             ><FaTrashAlt /></button>
         </div>
       </div>
-      <p className = "note">{item.content2}</p>
+      <p className = {classnames({"note": true, "through": item.done})}>{item.content2}</p>
     </ul>
   );
 };
