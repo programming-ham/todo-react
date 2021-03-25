@@ -3,6 +3,8 @@ import {useState} from "react";
 import {nanoid} from "nanoid";
 import Form from "./Form";
 import List from "./List";
+import Delete from "./Delete";
+
 
 const App = () => {
   const [items, setItems] = useState([]);
@@ -12,7 +14,6 @@ const App = () => {
   const deleteItem = (key) => {
     setItems(items.filter((item) => item.key !== key));
   };
-
   const handleCheck = selected => {
     const newItems = items.map(item => {
       if(item.key === selected.key) {
@@ -22,20 +23,29 @@ const App = () => {
     });
     setItems(newItems);
   }
+  const handleClickDeleteAll = () => {
+    setItems(items.filter(({items}) => items))
+  }
+  const handleClickDeleteDone = () => {
+    setItems(items.filter(({done}) => !done))
+  }
 
   return (
     <>
       <Form 
         addItem = {addItem}
-        />
+      />
       <List
         items = {items}
         deleteItem = {deleteItem}
         handleCheck = {handleCheck}
       />
+      <Delete 
+        handleClickDeleteAll = {handleClickDeleteAll}
+        handleClickDeleteDone = {handleClickDeleteDone}
+      />
     </>
   );
 };
-
 
 export default App;
