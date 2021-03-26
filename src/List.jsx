@@ -2,7 +2,7 @@ import {useState} from "react";
 import Filter from "./Filter";
 import Item from "./Item";
 
-const List = ({items, handleCheck, deleteItem}) => {
+const List = ({items, handleDone, handleEdit, deleteItem}) => {
   // 
   const [filter, setFilter] = useState("ALL");
   const displayItems = items.filter(item => {
@@ -29,7 +29,8 @@ const List = ({items, handleCheck, deleteItem}) => {
           <Item
             key = {item.key}
             item = {item} 
-            handleCheck = {handleCheck}
+            handleDone = {handleDone}
+            handleEdit = {handleEdit}
             deleteItem = {deleteItem}
           />
         );

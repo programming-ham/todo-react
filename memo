@@ -1,4 +1,7 @@
 ・editBtnの機能
+ -押されたらinput/textarea状態に
+ -更新ボタン、キャンセルボタンを用意
+ -itemにeditプロパティ(defaultはfalse)追加、trueで有効に、キャンセルボタンでまたfalseに、更新ボタンでテキスト反映・falseに
 ・itemの状態保存
 ・タスク名の改行
 

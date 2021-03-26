@@ -9,12 +9,12 @@ import Delete from "./Delete";
 const App = () => {
   const [items, setItems] = useState([]);
   const addItem = (text1, text2) => {
-    setItems([...items, {key: nanoid(), content1: text1, content2: text2, done: false}])
+    setItems([...items, {key: nanoid(), content1: text1, content2: text2, edit: false, done: false}])
   };
-  const deleteItem = (key) => {
+  const deleteItem = key => {
     setItems(items.filter((item) => item.key !== key));
   };
-  const handleCheck = selected => {
+  const handleDone = selected => {
     const newItems = items.map(item => {
       if(item.key === selected.key) {
         item.done = !item.done
@@ -22,7 +22,18 @@ const App = () => {
       return item;
     });
     setItems(newItems);
-  }
+  };
+  const handleEdit = selected => {
+    const newItems = items.map(item => {
+      if(item.key === selected.key) {
+        item.edit = !item.edit
+      }
+      return item;
+    });
+    setItems(newItems);
+  };
+
+
   const handleClickDeleteAll = () => {
     setItems(items.filter(({items}) => items))
   }
@@ -38,7 +49,8 @@ const App = () => {
       <List
         items = {items}
         deleteItem = {deleteItem}
-        handleCheck = {handleCheck}
+        handleDone = {handleDone}
+        handleEdit = {handleEdit}
       />
       <Delete 
         handleClickDeleteAll = {handleClickDeleteAll}
