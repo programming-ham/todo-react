@@ -33,6 +33,16 @@ const App = () => {
     setItems(newItems);
   };
 
+  const editContent1 = (text, key) => {
+    setItems(items.map((item) => {
+      if(item.key === key) {
+        return {...item, content1: text}
+      } else {
+        return item;
+      }
+    }))
+  }
+
 
   const handleClickDeleteAll = () => {
     setItems(items.filter(({items}) => items))
@@ -51,6 +61,7 @@ const App = () => {
         deleteItem = {deleteItem}
         handleDone = {handleDone}
         handleEdit = {handleEdit}
+        editContent1 = {editContent1}
       />
       <Delete 
         handleClickDeleteAll = {handleClickDeleteAll}

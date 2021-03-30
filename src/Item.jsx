@@ -1,7 +1,7 @@
 import classnames from "classnames";
 import {FaCheckCircle, FaTrashAlt, FaPen} from "react-icons/fa";
 
-const Item = ({item, handleDone, handleEdit, deleteItem}) => {
+const Item = ({item, handleDone, handleEdit, deleteItem, editContent1}) => {
   const handleChangeDone = () => {
     handleDone(item);
   };
@@ -14,10 +14,10 @@ const Item = ({item, handleDone, handleEdit, deleteItem}) => {
   return (
     <ul className = {classnames({"itemContents": true, "orange": item.done})}>
       <div className = "itemInner">
-          <li 
+         { item.edit ? <input onChange = {(e) => {editContent1(e.target.value, item.key)}} value = {item.content1} ></input>: <li 
             className = {classnames({"task": true, "through": item.done})}
             key = {item.key}
-          >{item.content1}</li>
+          >{item.content1}</li> }
           <div className = "btns">
             <button 
               className = {classnames("btn", "editBtn")}
