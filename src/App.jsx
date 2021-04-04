@@ -12,7 +12,7 @@ const App = () => {
     setItems([...items, {key: nanoid(), content1: text1, content2: text2, edit: false, done: false}])
   };
   const deleteItem = key => {
-    setItems(items.filter((item) => item.key !== key));
+    setItems(items.filter(item => item.key !== key));
   };
   const handleDone = selected => {
     const newItems = items.map(item => {
@@ -34,9 +34,21 @@ const App = () => {
   };
 
   const editContent1 = (text, key) => {
-    setItems(items.map((item) => {
+    setItems(items.map(item => {
       if(item.key === key) {
         return {...item, content1: text}
+      } else {
+        return item;
+      }
+    }))
+  }
+
+  const editContent2 = (text, key) => {
+    setItems(items.map(item => {
+      if(item.key === key) {
+        return {...item, content2: text}
+      } else if(text === "") {
+        return item;
       } else {
         return item;
       }
@@ -62,6 +74,7 @@ const App = () => {
         handleDone = {handleDone}
         handleEdit = {handleEdit}
         editContent1 = {editContent1}
+        editContent2 = {editContent2}
       />
       <Delete 
         handleClickDeleteAll = {handleClickDeleteAll}

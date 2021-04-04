@@ -14,6 +14,7 @@ const Form = ({addItem}) => {
   return (
     <form autoComplete = "off" onSubmit = {handleSubmit}>
       <input
+        className = "inputTask"
         id = "task"
         placeholder = "Name"
         value = {text1}
@@ -26,7 +27,8 @@ const Form = ({addItem}) => {
           }
         }}
       />
-      <textarea
+      <input
+      className = "inputNote"
         id = "note"
         placeholder = "Note"
         value = {text2}
