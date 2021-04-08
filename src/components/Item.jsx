@@ -7,7 +7,7 @@ const Item = ({item, handleDone, handleEdit, deleteItem, editContent1, editConte
   };
   const handleChangeEdit = () => {
     handleEdit(item);
-  }
+  };
 
   
   return (

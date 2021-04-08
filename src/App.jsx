@@ -1,9 +1,12 @@
 import "./style/main.css";
 import {useState} from "react";
+import {BrowserRouter as Router, Switch, Route} from "react-router-dom";
 import {nanoid} from "nanoid";
-import Form from "./Form";
-import List from "./List";
-import Delete from "./Delete";
+import Signup from "./auth/Signup";
+import Login from "./auth/Login";
+import Form from "./components/Form";
+import List from "./components/List";
+import Delete from "./components/Delete";
 
 
 const App = () => {
@@ -18,7 +21,7 @@ const App = () => {
     const newItems = items.map(item => {
       if(item.key === selected.key) {
         item.done = !item.done
-      }
+      };
       return item;
     });
     setItems(newItems);
@@ -40,8 +43,8 @@ const App = () => {
       } else {
         return item;
       }
-    }))
-  }
+    }));
+  };
 
   const editContent2 = (text, key) => {
     setItems(items.map(item => {
@@ -52,19 +55,30 @@ const App = () => {
       } else {
         return item;
       }
-    }))
-  }
+    }));
+  };
 
 
   const handleClickDeleteAll = () => {
     setItems(items.filter(({items}) => items))
-  }
+  };
   const handleClickDeleteDone = () => {
     setItems(items.filter(({done}) => !done))
-  }
+  };
 
   return (
     <>
+      <Router>
+        <Switch>
+          <Route exact path = "/signup">
+            <Signup />
+          </Route>
+          <Route exact path = "/login">
+            <Login />
+          </Route>
+        </Switch>
+      </Router>
+
       <Form 
         addItem = {addItem}
       />

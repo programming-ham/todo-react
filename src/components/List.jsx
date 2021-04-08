@@ -12,7 +12,7 @@ const List = ({items, handleDone, handleEdit, deleteItem, editContent1, editCont
       return !item.done;
     } else {
       return item.done;
-    }
+    };
   }); 
   const handleFilterChange = value => setFilter(value);
   // 上記全てfilter関連

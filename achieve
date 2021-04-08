@@ -1,0 +1,9 @@
+・itemの状態保存(firestore)
+・タスク名の改行
+
+・文字の大きさをそれぞれ変えずに編集したい
+・Noteが空なら編集時のinput化を防ぎたい
+・EditBtn押下時にfocusをinputTaskに持っていきたい→enterでeditNoteへ→enterで更新完了(editBtn)へ
+・input化したときのスタイル
+
+
