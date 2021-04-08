@@ -118,7 +118,7 @@ body {
   font-size: 15px;
 }
 
-form {
+.formAll {
   width: 50rem;
   margin: 0 auto;
   margin-top: 1rem;
@@ -129,21 +129,21 @@ form {
 }
 
 @media screen and (min-width: 601px) and (max-width: 1099px) {
-  form {
+  .formAll {
     width: 50vw;
     max-width: 50rem;
   }
 }
 
 @media screen and (max-width: 600px) {
-  form {
+  .formAll {
     width: 50vw;
     min-width: 20rem;
     margin-bottom: 1.5rem;
   }
 }
 
-.inputTask, .inputNote {
+.formTask, .formNote {
   display: inline-block;
   border: none;
   margin: 0.5rem 0;
@@ -153,7 +153,7 @@ form {
   color: #2d2d2d;
 }
 
-.addBtn {
+.formAddBtn {
   background: #1abc9c;
   color: #fff;
   border: none;
@@ -161,7 +161,7 @@ form {
   height: 3rem;
 }
 
-.addBtn:disabled {
+.formAddBtn:disabled {
   background: #a9a9a9;
 }
 
@@ -233,7 +233,7 @@ form {
   }
 }
 
-.orange {
+.itemOrange {
   border-color: #ffa500;
 }
 
@@ -245,46 +245,7 @@ form {
   padding: 0.5rem 0.5rem 0.5rem 0;
 }
 
-.task {
-  padding-left: 0.8rem;
-  font-weight: bold;
-}
-
-.through {
-  text-decoration: line-through;
-  color: #696969;
-}
-
-.note {
-  padding: 0.5rem 0 0.5rem 0.8rem;
-}
-
-.btns {
-  display: flex;
-  align-items: center;
-}
-
-.btn {
-  display: inline-block;
-  width: 3.5rem;
-  height: 2.5rem;
-  margin-right: 0.3rem;
-}
-
-.editBtn {
-  color: #0000ff;
-}
-
-.doneBtn {
-  color: #008000;
-}
-
-.deleteBtn {
-  color: #ff0000;
-  margin: 0;
-}
-
-.editTask, .editNote {
+.itemEditingTask, .itemEditingNote {
   width: 45rem;
   display: inline-block;
   border: none;
@@ -294,13 +255,52 @@ form {
   color: #2d2d2d;
 }
 
-.deleteBtns {
+.itemTask {
+  padding-left: 0.8rem;
+  font-weight: bold;
+}
+
+.itemBtns {
+  display: flex;
+  align-items: center;
+}
+
+.itemBtn {
+  display: inline-block;
+  width: 3.5rem;
+  height: 2.5rem;
+  margin-right: 0.3rem;
+}
+
+.itemEditBtn {
+  color: #0000ff;
+}
+
+.itemDoneBtn {
+  color: #008000;
+}
+
+.itemDeleteBtn {
+  color: #ff0000;
+  margin: 0;
+}
+
+.itemNote {
+  padding: 0.5rem 0 0.5rem 0.8rem;
+}
+
+.itemDone {
+  text-decoration: line-through;
+  color: #696969;
+}
+
+.deltBtns {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.allD {
+.deltAll {
   width: 15rem;
   height: 2.5rem;
   margin: 0 1rem;
@@ -311,13 +311,13 @@ form {
   box-shadow: 0.1rem 0.2rem #808080;
 }
 
-.allD:hover {
+.deltAll:hover {
   color: white;
   background-color: #ff0000;
   transition: 0.2s;
 }
 
-.allD:active {
+.deltAll:active {
   box-shadow: none;
   position: relative;
   top: 0.1rem;

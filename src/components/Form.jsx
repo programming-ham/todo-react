@@ -12,9 +12,9 @@ const Form = ({addItem}) => {
   };
 
   return (
-    <form autoComplete = "off" onSubmit = {handleSubmit}>
+    <form className = "formAll" autoComplete = "off" onSubmit = {handleSubmit}>
       <input
-        className = "inputTask"
+        className = "formTask"
         id = "task"
         placeholder = "Name"
         value = {text1}
@@ -28,7 +28,7 @@ const Form = ({addItem}) => {
         }}
       />
       <input
-      className = "inputNote"
+      className = "formNote"
         id = "note"
         placeholder = "Note"
         value = {text2}
@@ -41,7 +41,7 @@ const Form = ({addItem}) => {
         }}
       />
       <button
-        className = "addBtn"
+        className = "formAddBtn"
         id = "addBtn"
         disabled = {text1.trim() === ""}
         onClick = {() => {

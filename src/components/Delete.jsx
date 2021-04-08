@@ -3,14 +3,14 @@ import classnames from "classnames";
 const Delete = ({handleClickDeleteAll, handleClickDeleteDone}) => {
   return (
     <>
-      <div className = "deleteBtns">
+      <div className = "deltBtns">
         <button
-          className = {classnames("allD", "deleteAll")} 
+          className = "deltAll" 
           type = "button"
           onClick =   {handleClickDeleteAll}
         >Delete all tasks</button>
         <button 
-          className = {classnames("allD", "deleteDones" )}
+          className = "deltAll"
           type = "button"
           onClick = {handleClickDeleteDone}
         >Delete all dones</button>

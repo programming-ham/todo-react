@@ -16,7 +16,7 @@
   }
 }
 
-.orange {
+.itemOrange {
   border-color: #ffa500;
 }
 
@@ -28,45 +28,7 @@
   padding: 0.5rem 0.5rem 0.5rem 0;
 }
 
-.task {
-  padding-left: 0.8rem;
-  font-weight: bold;
-}
-
-.through {
-  text-decoration: line-through;
-  color : #696969;}
-
-.note {
-  padding: 0.5rem 0 0.5rem 0.8rem;
-}
-
-.btns {
-  display: flex;
-  align-items: center;
-}
-
-.btn {
-  display: inline-block;
-  width: 3.5rem;
-  height: 2.5rem;
-  margin-right: 0.3rem;
-}
-
-.editBtn {
-  color: #0000ff;
-}
-
-.doneBtn {
-  color: #008000;
-}
-
-.deleteBtn {
-  color: #ff0000;
-  margin: 0;
-}
-
-.editTask, .editNote {
+.itemEditingTask, .itemEditingNote {
   width: 45rem;
   display: inline-block;
   border: none;
@@ -76,10 +38,41 @@
   color: darken(#f9f9f9, 80%);
 }
 
-// display: inline-block;
-//   border: none;
-//   margin: 0.5rem 0;
-//   padding: 0.5rem 1rem;
-//   border-radius: 0.3rem;
-//   background: darken(#f9f9f9, 10%);
-//   color: darken(#f9f9f9, 80%);
+.itemTask {
+  padding-left: 0.8rem;
+  font-weight: bold;
+}
+
+.itemBtns {
+  display: flex;
+  align-items: center;
+}
+
+.itemBtn {
+  display: inline-block;
+  width: 3.5rem;
+  height: 2.5rem;
+  margin-right: 0.3rem;
+}
+
+.itemEditBtn {
+  color: #0000ff;
+}
+
+.itemDoneBtn {
+  color: #008000;
+}
+
+.itemDeleteBtn {
+  color: #ff0000;
+  margin: 0;
+}
+
+.itemNote {
+  padding: 0.5rem 0 0.5rem 0.8rem;
+}
+
+.itemDone {
+  text-decoration: line-through;
+  color : #696969;
+}

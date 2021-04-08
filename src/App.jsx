@@ -70,30 +70,37 @@ const App = () => {
     <>
       <Router>
         <Switch>
+
           <Route exact path = "/signup">
             <Signup />
           </Route>
+
           <Route exact path = "/login">
             <Login />
           </Route>
+
+          <Route exact path = "/">
+            <Form 
+              addItem = {addItem}
+            />
+            <List
+              items = {items}
+              deleteItem = {deleteItem}
+              handleDone = {handleDone}
+              handleEdit = {handleEdit}
+             editContent1 = {editContent1}
+              editContent2 = {editContent2}
+            />
+            <Delete 
+              handleClickDeleteAll = {handleClickDeleteAll}
+              handleClickDeleteDone = {handleClickDeleteDone}
+            />
+          </Route>
+          
         </Switch>
       </Router>
 
-      <Form 
-        addItem = {addItem}
-      />
-      <List
-        items = {items}
-        deleteItem = {deleteItem}
-        handleDone = {handleDone}
-        handleEdit = {handleEdit}
-        editContent1 = {editContent1}
-        editContent2 = {editContent2}
-      />
-      <Delete 
-        handleClickDeleteAll = {handleClickDeleteAll}
-        handleClickDeleteDone = {handleClickDeleteDone}
-      />
+      
     </>
   );
 };
