@@ -2,8 +2,7 @@ import "./style/main.css";
 import {useState} from "react";
 import {BrowserRouter as Router, Switch, Route} from "react-router-dom";
 import {nanoid} from "nanoid";
-import Signup from "./auth/Signup";
-import Login from "./auth/Login";
+import Auth from "./components/Auth";
 import Form from "./components/Form";
 import List from "./components/List";
 import Delete from "./components/Delete";
@@ -71,12 +70,8 @@ const App = () => {
       <Router>
         <Switch>
 
-          <Route exact path = "/signup">
-            <Signup />
-          </Route>
-
-          <Route exact path = "/login">
-            <Login />
+          <Route exact path = "/auth">
+            <Auth />
           </Route>
 
           <Route exact path = "/">

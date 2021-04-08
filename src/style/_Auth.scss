@@ -1,0 +1,52 @@
+.authTitles {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  margin: 3rem 0 5rem 0;
+}
+
+.authMainTitle {
+  font-size: 4rem;
+  font-weight: bold;
+  padding-right: 1.5rem;
+}
+
+.authSubTitle {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.by {
+  padding-right: 0.5rem;
+}
+
+.authLogIn {
+  margin-bottom: 5rem;
+}
+
+.authOr {
+  font-size: 2rem;
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 3rem;
+}
+
+.authForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.authInput {
+  width: 30rem;
+}
+
+.authSubmit {
+  width: 30rem;
+}
+
+.if {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
