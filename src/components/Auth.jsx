@@ -2,62 +2,48 @@ import classnames from "classnames";
 
 const Auth = () => {
   return(
-    <>
-      <div className = "authTitles">
-        <h1 className = "authMainTitle">ToDoList</h1>
-        <h2 className = "authSubTitle"><span className = {classnames("authSubTitle", "by")}>by</span>React</h2>
-      </div>
+    <div className="authBody">
+      <div className = "authContents">
+        <div className = "authLeft">
+          <div className = "authTitles">
+            <h1 className = "authMainTitle">ToDoList</h1>
+            <h2 className = "authSubTitle"><span className = {classnames  ("authSubTitle", "by")}>by</span>React</h2>
+          </div>
+          <p>Please log in to save your task informations</p>
+        </div>
 
-      <div className = "authLogIn">
-        <h3 className = "authOr">Log In</h3>
-        <form className = "authForm">
-          <input 
-            className = "authInput"
-            type = "text"
-            placeholder = "mail"
-          />
-          <input 
-            className = "authInput"
-            type = "password"
-            placeholder = "password"
-          />
-          <button 
-            className = "authSubmit" 
-            type = "submit"
-          >Log In</button>
-          <p>
+        <div className="authRight">
+          <h2 className = "authLogIn">Log In</h2>
+          <form className = "authForm">
+            <label className = "labelMail" htmlFor="mail">mail</label>
             <input 
-              className = "authAutoLogIn"
-              type="checkbox"
-              value = "auto"
-            />Enable auto login
-          </p>
-          
-        </form>
+              className = "inputMail"
+              id = "mail"
+              type = "text"
+              autoComplete = "off"
+            />
+            <label className = "labelPassword" htmlFor="password">passwoord</label>
+            <input 
+              className = "inputPassword"
+              id = "password"
+              type = "password"
+            />
+            <div className="authInner">
+              <label className = "authAutoLogIn">
+                <input type="checkbox"/>Enable auto login</label>
+              <p>n/16</p>
+            </div>
+            
+            <button 
+              className = "authSubmit" 
+              type = "submit"
+            >Log In</button>
+          </form>
+          <span className = "if">If you haven't signed up yet...</span><a className = "authSignUp" href = "#">Sign Up</a>
+        </div>
       </div>
-
-      <p className = "if">If you haven't signed up yet...</p>
-
-      <div className = "authSignUp">
-        <h3 className = "authOr">Sign Up</h3>
-        <form className = "authForm">
-          <input
-            className = "authInput" 
-            type = "text"
-            placeholder = "mail" 
-          />
-          <input 
-            className = "authInput" 
-            type="password" 
-            placeholder = "password"
-          />
-          <button 
-            className = "authSubmit" 
-            type = "submit"
-          >Register</button>
-        </form>
-      </div>
-    </>
+    </div>
+   
   );
 };
 
