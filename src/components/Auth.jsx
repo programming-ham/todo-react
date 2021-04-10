@@ -9,7 +9,8 @@ const Auth = () => {
             <h1 className = "authMainTitle">ToDoList</h1>
             <h2 className = "authSubTitle"><span className = {classnames  ("authSubTitle", "by")}>by</span>React</h2>
           </div>
-          <p>Please log in to save your task informations</p>
+          <p className = "authGif"></p>
+          <p>Please log in to save your task information→</p>
         </div>
 
         <div className="authRight">

@@ -6,4 +6,7 @@
 ・EditBtn押下時にfocusをinputTaskに持っていきたい→enterでeditNoteへ→enterで更新完了(editBtn)へ
 ・input化したときのスタイル
 
-
+サインアップコンポーネントの実装
+Gifの作成と埋め込み
+認証機能
+アプリのデザイン(ログアウトボタンなど)

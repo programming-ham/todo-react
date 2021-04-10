@@ -2,33 +2,34 @@
 $blue: #58BFF6;
 
 .authBody {
-  background-color: #d3d3d3;
+  background-color: #dcdcdc;
   width: 100vw;
-  height: 100vw;
-  position: relative;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .authContents {
-  width: 90vw;
+  width: 80vw;
+  height: 90vh;
   margin: 0 auto;
   background-color: #fff;
   border-radius: 2rem;
   display: flex;
   justify-content: space-between;
-  position: absolute;
-  // top: 25%;
-  // left: 25%;
+  align-items: center;
 }
 
 .authLeft {
-  width: 40vw;
+  width: 55vw;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
 .authRight {
-  width: 40vw;
+  width: 45vw;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -81,7 +82,7 @@ $blue: #58BFF6;
   outline: none;
   padding: 1rem 1rem;
   border-radius: 2rem;
-  background: darken(#f9f9f9, 10%);
+  background: darken(#f9f9f9,5%);
   color: darken(#f9f9f9, 80%);
 }
 
@@ -136,3 +137,10 @@ $blue: #58BFF6;
   }
 }
 
+.authGif {
+  height: 30rem;
+  width: 50rem;
+  background-color: $blue;
+  border-radius: 5rem;
+  margin-bottom: 5rem;
+}
