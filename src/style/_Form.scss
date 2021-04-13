@@ -20,9 +20,10 @@
 .formTask, .formNote {
   display: inline-block;
   border: none;
-  margin: 0.5rem 0;
-  padding: 0.5rem 1rem;
-  border-radius: 0.3rem;
+  margin-bottom: 1rem ;
+  padding-left: 1rem;
+  height: 3rem;
+  border-radius: 0.5rem;
   background: darken(#f9f9f9, 10%);
   color: darken(#f9f9f9, 80%);
 }
@@ -31,7 +32,7 @@
   background: #1abc9c;
   color: #fff;
   border: none;
-  border-radius: 0.3rem;
+  border-radius: 0.5rem;
   height: 3rem;
   &:disabled {
     background: #a9a9a9;

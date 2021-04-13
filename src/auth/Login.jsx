@@ -1,6 +1,10 @@
+import {useState} from "react";
 import classnames from "classnames";
 
 const Auth = () => {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [autoLogin, setAutoLogin] = useState("");
   return(
     <div className="authBody">
       <div className = "authContents">
@@ -14,25 +18,25 @@ const Auth = () => {
         </div>
 
         <div className="authRight">
-          <h2 className = "authLogIn">Log In</h2>
+          <h2 className = "logIn">Log In</h2>
           <form className = "authForm">
-            <label className = "labelMail" htmlFor="mail">mail</label>
+            <label className = "authLabelMail" htmlFor="mail">mail</label>
             <input 
-              className = "inputMail"
+              className = "authInputMail"
               id = "mail"
               type = "text"
               autoComplete = "off"
             />
-            <label className = "labelPassword" htmlFor="password">passwoord</label>
+            <label className = "authLabelPassword" htmlFor="password">passwoord</label>
             <input 
-              className = "inputPassword"
+              className = "authInputPassword"
               id = "password"
               type = "password"
             />
             <div className="authInner">
-              <label className = "authAutoLogIn">
+              <label className = "autoLogIn">
                 <input type="checkbox"/>Enable auto login</label>
-              <p>n/16</p>
+              <p className = "pwLength">n/16</p>
             </div>
             
             <button 
@@ -40,7 +44,7 @@ const Auth = () => {
               type = "submit"
             >Log In</button>
           </form>
-          <span className = "if">If you haven't signed up yet...</span><a className = "authSignUp" href = "#">Sign Up</a>
+          <span className = "if">If you haven't signed up yet...</span><a className = "authTo" href = "#">Sign Up</a>
         </div>
       </div>
     </div>

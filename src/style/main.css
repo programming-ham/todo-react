@@ -176,17 +176,18 @@ body {
   padding-right: 0.5rem;
 }
 
-.authLogIn {
+.authGif {
+  height: 30rem;
+  width: 50rem;
+  background-color: #58BFF6;
+  border-radius: 5rem;
+  margin-bottom: 5rem;
+}
+
+.logIn, .signUp {
   font-size: 3rem;
   font-weight: bold;
   padding-bottom: 5rem;
-}
-
-.labelMail, .labelPassword {
-  width: 30rem;
-  display: block;
-  text-align: left;
-  padding: 0 0 0.5rem 1rem;
 }
 
 .authForm {
@@ -195,7 +196,14 @@ body {
   align-items: center;
 }
 
-.inputMail, .inputPassword {
+.authLabelMail, .authLabelPassword {
+  width: 30rem;
+  display: block;
+  text-align: left;
+  padding: 0 0 0.5rem 1rem;
+}
+
+.authInputMail, .authInputPassword {
   width: 30rem;
   border: none;
   outline: none;
@@ -205,11 +213,11 @@ body {
   color: #2d2d2d;
 }
 
-.inputMail {
+.authInputMail {
   margin-bottom: 2rem;
 }
 
-.inputPassword {
+.authInputPassword {
   margin-bottom: 0.5rem;
 }
 
@@ -246,20 +254,17 @@ body {
   padding-right: 1rem;
 }
 
-.authSignUp {
+.authTo {
   color: #58BFF6;
 }
 
-.authSignUp:hover {
+.authTo:hover {
   color: #696969;
 }
 
-.authGif {
-  height: 30rem;
-  width: 50rem;
-  background-color: #58BFF6;
-  border-radius: 5rem;
-  margin-bottom: 5rem;
+.pwLength {
+  margin-right: 1.5rem;
+  text-align: right;
 }
 
 .formAll {
@@ -290,9 +295,10 @@ body {
 .formTask, .formNote {
   display: inline-block;
   border: none;
-  margin: 0.5rem 0;
-  padding: 0.5rem 1rem;
-  border-radius: 0.3rem;
+  margin-bottom: 1rem;
+  padding-left: 1rem;
+  height: 3rem;
+  border-radius: 0.5rem;
   background: #e0e0e0;
   color: #2d2d2d;
 }
@@ -301,7 +307,7 @@ body {
   background: #1abc9c;
   color: #fff;
   border: none;
-  border-radius: 0.3rem;
+  border-radius: 0.5rem;
   height: 3rem;
 }
 

@@ -57,17 +57,18 @@ $blue: #58BFF6;
   padding-right: 0.5rem;
 }
 
-.authLogIn {
+.authGif {
+  height: 30rem;
+  width: 50rem;
+  background-color: $blue;
+  border-radius: 5rem;
+  margin-bottom: 5rem;
+}
+
+.logIn, .signUp {
   font-size: 3rem;
   font-weight: bold;
   padding-bottom: 5rem;
-}
-
-.labelMail, .labelPassword {
-  width: 30rem;
-  display: block;
-  text-align: left;
-  padding: 0 0 0.5rem 1rem;
 }
 
 .authForm {
@@ -76,7 +77,14 @@ $blue: #58BFF6;
   align-items: center;
 }
 
-.inputMail, .inputPassword {
+.authLabelMail, .authLabelPassword {
+  width: 30rem;
+  display: block;
+  text-align: left;
+  padding: 0 0 0.5rem 1rem;
+}
+
+.authInputMail, .authInputPassword {
   width: 30rem;
   border: none;
   outline: none;
@@ -86,11 +94,11 @@ $blue: #58BFF6;
   color: darken(#f9f9f9, 80%);
 }
 
-.inputMail {
+.authInputMail {
   margin-bottom: 2rem;
 }
 
-.inputPassword {
+.authInputPassword {
   margin-bottom: 0.5rem;
 }
 
@@ -100,10 +108,6 @@ $blue: #58BFF6;
   justify-content: space-between;
   margin-bottom: 2rem;
 }
-
-// .authAutoLogin {
-
-// }
 
 .authSubmit {
   width: 30rem;
@@ -130,17 +134,14 @@ $blue: #58BFF6;
   padding-right: 1rem;
 }
 
-.authSignUp {
+.authTo {
   color: $blue;
   &:hover {
     color: #696969
   }
 }
 
-.authGif {
-  height: 30rem;
-  width: 50rem;
-  background-color: $blue;
-  border-radius: 5rem;
-  margin-bottom: 5rem;
+.pwLength {
+  margin-right: 1.5rem;
+  text-align: right;
 }
