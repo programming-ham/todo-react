@@ -315,6 +315,18 @@ body {
   background: #a9a9a9;
 }
 
+.topInner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.logOutBtn {
+  position: absolute;
+  right: 0;
+}
+
 .list {
   margin: 0 auto;
   display: flex;

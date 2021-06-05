@@ -1,5 +1,3 @@
-import classnames from "classnames";
-
 const Delete = ({handleClickDeleteAll, handleClickDeleteDone}) => {
   return (
     <>

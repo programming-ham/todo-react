@@ -38,3 +38,15 @@
     background: #a9a9a9;
   }
 }
+
+.topInner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.logOutBtn {
+  position: absolute;
+  right: 0;
+}
