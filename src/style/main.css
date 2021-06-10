@@ -140,6 +140,18 @@ body {
   align-items: center;
 }
 
+@media screen and (max-width: 600px) {
+  .authContents {
+    flex-direction: column;
+  }
+}
+
+@media screen and (min-width: 601px) and (max-width: 1099px) {
+  .authContents {
+    flex-direction: column;
+  }
+}
+
 .authLeft {
   width: 55vw;
   display: flex;
@@ -154,11 +166,35 @@ body {
   align-items: center;
 }
 
+@media screen and (max-width: 600px) {
+  .authRight {
+    padding-bottom: 150px;
+  }
+}
+
+@media screen and (min-width: 601px) and (max-width: 1099px) {
+  .authRight {
+    padding-bottom: 150px;
+  }
+}
+
 .authTitles {
   display: flex;
   align-items: baseline;
   justify-content: center;
   margin-bottom: 5rem;
+}
+
+@media screen and (max-width: 600px) {
+  .authTitles {
+    padding-top: 20px;
+  }
+}
+
+@media screen and (min-width: 601px) and (max-width: 1099px) {
+  .authTitles {
+    padding-top: 20px;
+  }
 }
 
 .authMainTitle {
@@ -182,6 +218,30 @@ body {
   background-color: #58BFF6;
   border-radius: 5rem;
   margin-bottom: 5rem;
+}
+
+@media screen and (max-width: 600px) {
+  .authGif {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 601px) and (max-width: 1099px) {
+  .authGif {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .authPlease {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 601px) and (max-width: 1099px) {
+  .authPlease {
+    display: none;
+  }
 }
 
 .logIn, .signUp {

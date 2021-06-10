@@ -32,7 +32,7 @@ const Login = () => {
             <h2 className = "authSubTitle"><span className = {classnames  ("authSubTitle", "by")}>by</span>React</h2>
           </div>
           <p className = "authGif"></p>
-          <p>Please log in to save your task information→</p>
+          <p className = "authPlease">Please log in to save your task information→</p>
         </div>
 
         <div className="authRight">

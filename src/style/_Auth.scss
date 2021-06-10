@@ -19,6 +19,12 @@ $blue: #58BFF6;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  @include sp {
+    flex-direction: column;
+  }
+  @include tab {
+    flex-direction: column;
+  }
 }
 
 .authLeft {
@@ -33,6 +39,13 @@ $blue: #58BFF6;
   display: flex;
   flex-direction: column;
   align-items: center;
+  @include sp {
+    padding-bottom: 150px;
+  }
+  @include tab {
+    padding-bottom: 150px;
+  }
+
 }
 
 .authTitles {
@@ -40,6 +53,12 @@ $blue: #58BFF6;
   align-items: baseline;
   justify-content: center;
   margin-bottom: 5rem;
+  @include sp {
+    padding-top: 20px;
+  }
+  @include tab {
+    padding-top: 20px;
+  }
 }
 
 .authMainTitle {
@@ -63,6 +82,21 @@ $blue: #58BFF6;
   background-color: $blue;
   border-radius: 5rem;
   margin-bottom: 5rem;
+  @include sp {
+    display: none;
+  }
+  @include tab {
+    display: none;
+  }
+}
+
+.authPlease {
+  @include sp {
+    display: none;
+  }
+  @include tab {
+    display: none;
+  }
 }
 
 .logIn, .signUp {
