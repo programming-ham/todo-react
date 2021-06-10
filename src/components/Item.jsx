@@ -1,27 +1,26 @@
 import classnames from "classnames";
 import {FaCheckCircle, FaTrashAlt, FaPen} from "react-icons/fa";
 
-const Item = ({item, handleDone, handleEdit, deleteItem, editContent1, editContent2}) => {
+const Item = ({task, handleDone, handleEdit, deleteTask, editContent1, editContent2}) => {
   const handleChangeDone = () => {
-    handleDone(item);
+    handleDone(task);
   };
   const handleChangeEdit = () => {
-    handleEdit(item);
+    handleEdit(task);
   };
-
   
   return (
-    <ul className = {classnames({"itemContents": true, "itemOrange": item.done})}>
+    <ul className = {classnames({"itemContents": true, "itemOrange": task.done})}>
       <div className = "itemInner">
-        { item.edit ? <input 
+        { task.edit ? <input 
           className = "itemEditingTask" 
           id = "itemEditingTask" 
-          onChange = {e => {editContent1(e.target.value, item.key)}} 
-          value = {item.content1} 
+          onChange = {e => {editContent1(e.target.value, task.key)}} 
+          value = {task.content1} 
         ></input> : <li 
-          className = {classnames({"itemTask": true, "itemDone": item.done})}
-          key = {item.key}
-        >{item.content1}</li> }
+          className = {classnames({"itemTask": true, "itemDone": task.done})}
+          key = {task.key}
+        >{task.content1}</li> }
         <div className = "itemBtns">
           <button 
             className = {classnames("itemBtn", "itemEditBtn")}
@@ -33,17 +32,17 @@ const Item = ({item, handleDone, handleEdit, deleteItem, editContent1, editConte
           ><FaCheckCircle /></button>
           <button
             className = {classnames("itemBtn", "itemDeleteBtn")}
-            onClick = {() => deleteItem(item.key)}
+            onClick = {() => deleteTask(task.key)}
           ><FaTrashAlt /></button>
         </div>
       </div>
-      { item.edit ? <input
+      { task.edit ? <input
         className = "itemEditingNote"
-        onChange = {e => {editContent2(e.target.value, item.key)}}
-        value = {item.content2}
+        onChange = {e => {editContent2(e.target.value, task.key)}}
+        value = {task.content2}
       ></input> : <p
-        className = {classnames({"itemNote": true, "itemDone": item.done})}
-      >{item.content2}</p>}
+        className = {classnames({"itemNote": true, "itemDone": task.done})}
+      >{task.content2}</p>}
     </ul>
   );
 };

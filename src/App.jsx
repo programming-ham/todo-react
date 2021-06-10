@@ -14,64 +14,62 @@ import {db} from "../src/firebase/config";
  
 
 const App = () => {
+  const [tasks, setTasks] = useState([]);
   const logout = () => {
     auth.signOut()
       .then(() => {console.log("ログアウト成功")})
       .catch((err) => {console.log("ログアウト失敗")})
   }
-  const [items, setItems] = useState([]);
-  const addItem = (text1, text2) => {
-    setItems([...items, {key: nanoid(), content1: text1, content2: text2, edit: false, done: false}])
+  const addTask = (text1, text2) => {
+    setTasks([...tasks, {key: nanoid(), content1: text1, content2: text2, edit: false, done: false}])
   };
-  const deleteItem = key => {
-    setItems(items.filter(item => item.key !== key));
+  const deleteTask = key => {
+    setTasks(tasks.filter(task => task.key !== key));
   };
   const handleDone = selected => {
-    const newItems = items.map(item => {
-      if(item.key === selected.key) {
-        item.done = !item.done
+    const newTasks = tasks.map(task => {
+      if(task.key === selected.key) {
+        task.done = !task.done
       };
-      return item;
+      return task;
     });
-    setItems(newItems);
+    setTasks(newTasks);
   };
   const handleEdit = selected => {
-    const newItems = items.map(item => {
-      if(item.key === selected.key) {
-        item.edit = !item.edit
+    const newTasks = tasks.map(task => {
+      if(task.key === selected.key) {
+        task.edit = !task.edit
       }
-      return item;
+      return task;
     });
-    setItems(newItems);
+    setTasks(newTasks);
   };
   const editContent1 = (text, key) => {
-    setItems(items.map(item => {
-      if(item.key === key) {
-        return {...item, content1: text}
+    setTasks(tasks.map(task => {
+      if(task.key === key) {
+        return {...task, content1: text}
       } else {
-        return item;
+        return task;
       }
     }));
   };
   const editContent2 = (text, key) => {
-    setItems(items.map(item => {
-      if(item.key === key) {
-        return {...item, content2: text}
+    setTasks(tasks.map(task => {
+      if(task.key === key) {
+        return {...task, content2: text}
       } else if(text === "") {
-        return item;
+        return task;
       } else {
-        return item;
+        return task;
       }
     }));
   };
   const handleClickDeleteAll = () => {
-    setItems(items.filter(({items}) => items))
+    setTasks(tasks.filter(({tasks}) => tasks))
   };
   const handleClickDeleteDone = () => {
-    setItems(items.filter(({done}) => !done))
+    setTasks(tasks.filter(({done}) => !done))
   };
-  const [tasks, setTasks] = useState([]);
-
 
   useEffect(() => {
     db.collection("tasks")
@@ -104,15 +102,16 @@ const App = () => {
             <LoggedInRoute>
               <div className = "topInner">
                 <Form 
-                addItem = {addItem}
+                addItem = {addTask}
                 />
                 <button className = "logOutBtn" onClick = {logout}>Log Out</button>
               </div>
+              
               {tasks.map(task => {
                 return (
                   <List
-                    items = {items}
-                    deleteItem = {deleteItem}
+                    tasks = {tasks}
+                    deleteTask = {deleteTask}
                     handleDone = {handleDone}
                     handleEdit = {handleEdit}
                     editContent1 = {editContent1}
